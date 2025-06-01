@@ -175,12 +175,13 @@ body {
 }
 
 .clouds-bg {
-  position:absolute;
+  position:relative;
   bottom: 0;
   left: 0;
   width: 100%;
   right: 0;
-  height: 300px;
+  height: 350px;
+  width: 1600px;
   mask-image: linear-gradient(to bottom, black 85%, transparent 80%);
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
  position:absolute;
@@ -350,11 +351,14 @@ body {
 <!-- image insect-->
 <body>
   <section class="team-section">
+      <img src="leftDoted.svg" alt="dots" class="dotss dotss-left" />
+    <img src="rightDoted.svg" alt="dots" class="dotss dotss-right" />
     <div class="content-wrapper">
       <h1>Don’t let the challenges of building a product team slow you down.</h1>
       <h2>Let us help you achieve your goals</h2>
       <p>Here’s a new way to build good products.</p>
       <img src="Second_Section _Image_Web.png" alt="Product Team Graphic" class="team-image" />
+     
     </div>
   </section>
 </body>
@@ -365,12 +369,35 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
+
 .team-section {
   background-color: #1d1c35; /* Dark navy */
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 35px 20px;
+  position: relative;
+  overflow: hidden;
 }
+.dotss {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 160px; /* Adjust as needed */
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.dotss-left {
+  left: -70px;
+  top: 27%;
+}
+
+.dotss-right {
+  right: -70px;
+  transform: translateY(-50%) scaleX(-1); /* mirror effect */
+  bottom:40px;
+  
+}
+
 
 .content-wrapper {
   max-width: 1100px;
